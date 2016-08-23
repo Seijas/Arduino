@@ -1,8 +1,4 @@
-/**************************/
-/*     popurri para Arduino     */  
-/**************************/
-
-/**************** Antonio Guillermo Pérez Coronilla ***************/  /* <-- Que amor de hombre --> */
+/* Antonio Guillermo Pérez Coronilla */
 
 /* declaración de variables */
 int spk=13;                             // altavoz a GND y pin 13
@@ -21,24 +17,25 @@ int a[5]={220,440,880,1760,3520};       // La
 int as[5]={233,466,932,1866,3729};      // La#
 int b[5]={247,494,988,1976,3951};       // Si
 
-void nota(int a, int b);            // declaracion de la funcion auxiliar. Recibe dos numeros enteros.
+// void nota(int a, int b);                // declaracion de la funcion auxiliar. Recibe dos numeros enteros.
 
-void setup(){  
+void setup(){}
 
+void nota(int frec, int t){
+  tone(spk,frec);
+  delay(t);
 }
 
-void nota(int frec, int t)
-{
-    tone(spk,frec);      // suena la nota frec recibida
-    delay(t);            // para despues de un tiempo t
-}
-
+int l = 0;
 void loop(){
+  if (l == 0) {
+    melodias();
+    l++;
+  }
 }
 
-void melodias(int e){
+void melodias(){
 
-  if
 /**************************************/
 /*                  HARRY POTTER                    */
 /**************************************/

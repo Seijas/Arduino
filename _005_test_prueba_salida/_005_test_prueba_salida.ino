@@ -1,7 +1,7 @@
-int pin_s = 12;
+int pin_s = 10;
 
 void setup() {
-  pinMode(pin_s);
+  pinMode(pin_s, OUTPUT);
 }
 
 void loop() {
