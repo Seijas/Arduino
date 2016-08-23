@@ -24,6 +24,7 @@ void setup(){
   Serial.println("press: 1 to Harry Potter");
   Serial.println("press: 2 to Star Wars");
   Serial.println("press: 3 to Imperial March");
+  Serial.println("press: 4 to make complete scale");
 }
 
 void nota(int frec, int t){
@@ -41,6 +42,25 @@ void loop(){
     theme_star_wars();
   } else if (choice == 3) {
     theme_imperial_march();
+  } else if (choice == 4) {
+    test_escala();
+  }
+}
+
+void test_escala(){
+  for(int i=0; i<5; i++){
+    nota(c[i+1],1000);noTone(spk);delay(100);
+    nota(cs[i+1],1000);noTone(spk);delay(100);
+    nota(d[i+1],1000);noTone(spk);delay(100);
+    nota(ds[i+1],1000);noTone(spk);delay(100);
+    nota(e[i+1],1000);noTone(spk);delay(100);
+    nota(f[i+1],1000);noTone(spk);delay(100);
+    nota(fs[i+1],1000);noTone(spk);delay(100);
+    nota(g[i+1],1000);noTone(spk);delay(100);
+    nota(gs[i+1],1000);noTone(spk);delay(100);
+    nota(a[i+1],1000);noTone(spk);delay(100);
+    nota(as[i+1],1000);noTone(spk);delay(100);
+    nota(b[i+1],1000);noTone(spk);delay(100);
   }
 }
 
