@@ -38,22 +38,19 @@ void nota(int frec, int t){
 
 void loop(){
   if ( digitalRead(p_do) == HIGH ) {
-    nota(c[1],1000);noTone(spk);
-  }
-  if ( digitalRead(p_re) == HIGH ) {
-    nota(d[1],1000);noTone(spk);
-  }
-  if ( digitalRead(p_mi) == HIGH ) {
-    nota(e[1],1000);noTone(spk);
-  }
-  if ( digitalRead(p_fa) == HIGH ) {
-    nota(f[1],1000);noTone(spk);
-  }
-  if ( digitalRead(p_sol)== HIGH ) {
-    nota(g[1],1000);noTone(spk);
-  }
-  if ( digitalRead(p_la) == HIGH ) {
-    nota(a[1],1000);noTone(spk);
+    nota(c[1],10);
+  } else if ( digitalRead(p_re) == HIGH ) {
+    nota(d[1],10);
+  } else if ( digitalRead(p_mi) == HIGH ) {
+    nota(e[1],10);
+  } else if ( digitalRead(p_fa) == HIGH ) {
+    nota(f[1],10);
+  } else if ( digitalRead(p_sol)== HIGH ) {
+    nota(g[1],10);
+  } else if ( digitalRead(p_la) == HIGH ) {
+    nota(a[1],10);
+  } else {
+    noTone(spk);
   }
 }
 
